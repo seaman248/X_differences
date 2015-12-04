@@ -1,18 +1,24 @@
 layerSkip = 3;
 NE = zeros(300, 3);
 NEOverlay = zeros(300,3);
-NE_Lenght = 0;
+NE_Lenght = 0; % Z ядра
 
+% Цикл по картинкам
 for i=1:layerSkip:Zp
+%     Формируем имя картинки в цикле
     imgName = [images, 'nucleus_z',num2str(i,'%02d'), 'c1.PNG'];
+%     Делаем из картинки матрицу
     image = imread(imgName);
+%     Выводим картинку обратным преобразованием из матрицы
     imagesc(image);
+%     Берем координаты поставленных точек
     [x,y,P] = impixel();
+%     Считаем количество точек
     numClicks = numel(x);
-    
-    NE(
-    
+%     Строки матрицы NE заполняются координатами поставленных точек
+    NE(NE_Lenght+1:NE_Lenght+numClicks,:) = [x,y,i*7*ones(numClicks,1)];
+%     Инкрементируем переменную длины ядра
     NE_Lenght = NE_Lenght + numClicks;
 end
 
-disp(NE_Lenght); 
+ 
