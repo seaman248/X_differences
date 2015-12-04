@@ -10,5 +10,5 @@ for i=1:layerSkip:Zp
     [x,y,P] = impixel();
     numClicks = numel(x);
     
-    disp([x, y, numClicks]);
+    disp(numClicks);
 end
