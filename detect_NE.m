@@ -15,7 +15,7 @@ for i=1:layerSkip:Zp
     [x,y,P] = impixel();
 %     Считаем количество точек
     numClicks = numel(x);
-%     Строки матрицы NE заполняются координатами поставленных точек
+%     Строки матрицы NE заполняются координатами поставленных мышкой точек
     NE(NE_Lenght+1:NE_Lenght+numClicks,:) = [x,y,i*7*ones(numClicks,1)];
 %     Инкрементируем переменную длины ядра
     NE_Lenght = NE_Lenght + numClicks;
