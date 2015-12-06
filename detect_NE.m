@@ -1,4 +1,9 @@
 addpath('./required_functions');
+% 
+% load('FITC.mat');
+% load('DAPI.mat');
+% load('Rh.mat');
+
 layerSkip = 3;
 NE = zeros(300, 3);
 NEOverlay = zeros(300,3);
@@ -44,5 +49,6 @@ N1.NE_c = (1/D(3,3))^(1/2);
 save('NE.mat', 'N1');
 
 close all;
+
 
  

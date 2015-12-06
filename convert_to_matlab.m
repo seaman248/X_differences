@@ -1,7 +1,6 @@
 clear all;
 images = './nucleus_a/nucleus/';
-Xp = 207;
-Yp = 204;
+[Xp, Yp] = size(imread([images, 'nucleus_z01c1.PNG']));
 fromZ = 1;
 toZ = 44;
 Zp = toZ - fromZ;
@@ -25,3 +24,6 @@ end
 % save('DAPI.mat', 'DAPI');
 % save('FITC.mat', 'FITC');
 % save('Rh.mat', 'Rh');
+% 
+% 
+% clear; clc;
