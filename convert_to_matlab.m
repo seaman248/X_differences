@@ -8,15 +8,15 @@ Zp = toZ - fromZ;
 [DAPI, FITC, Rh] = deal(zeros(Xp, Yp, Zp));
 
 for i = fromZ:toZ
-    filename = [images, 'nucleus_z',num2str(i,'%02d'), 'c1.PNG'];
+    filename = [images, 'nucleus_z',num2str(i,'%02d'), 'c3.PNG'];
     DAPIImage = imread(filename);
     DAPI(:,:,i) = DAPIImage;
     
-    filename = [images, 'nucleus_z',num2str(i, '%02d'), 'c2.PNG'];
+    filename = [images, 'nucleus_z',num2str(i, '%02d'), 'c1.PNG'];
     FITCImage = imread(filename);
     FITC(:,:,i) = FITCImage;
     
-    filename = [images, 'nucleus_z',num2str(i, '%02d'), 'c3.PNG'];
+    filename = [images, 'nucleus_z',num2str(i, '%02d'), 'c2.PNG'];
     RhImage = imread(filename);
     Rh(:,:,i) = RhImage;
 end
