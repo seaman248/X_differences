@@ -38,10 +38,10 @@ end
 N1.NE_points = NE(1:NE_Lenght, :);
 N1.NE_overlayPoints = NEOverlay(1:NE_Lenght, :);
 % В функцию берем транспонированную матрицу
-[N1.tensor, N1.center] = MinVolEllipse(N1.NE_points', .001);
+[N1.NE_tensor, N1.NE_center] = MinVolEllipse(N1.NE_points', .001);
 [N1.overlayTensor, N1.overlayCenter] = MinVolEllipse(N1.NE_overlayPoints', .001);
 % Хер пойми че эт и зачем
-[~, D] = eig(N1.tensor);
+[~, D] = eig(N1.NE_tensor);
 N1.NE_a = (1/D(1,1))^(1/2);
 N1.NE_b = (1/D(2,2))^(1/2);
 N1.NE_c = (1/D(3,3))^(1/2);

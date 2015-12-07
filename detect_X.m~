@@ -1,5 +1,0 @@
-layerSkip = 2;
-load('NE.mat');
-
-S1 = zeros(300, 3);
-S
