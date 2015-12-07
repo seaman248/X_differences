@@ -24,7 +24,7 @@ for i=1:layerSkip:Zp
 %     Строки матрицы NE заполняются координатами поставленных мышкой точек
 %     Возможно семерка - это коэф. Zp поскольку размерность слоев не
 %     совпадает с размерностью Zp
-    NE(NE_Lenght+1:NE_Lenght+numClicks,:) = [x,y,i*7*ones(numClicks,1)];
+    NE(NE_Lenght+1:NE_Lenght+numClicks,:) = [x,y,i*6*ones(numClicks,1)];
 %     NE без поправки на слои? не понятно зачем
     NEOverlay(NE_Lenght+1:NE_Lenght+numClicks,:) = [x,y,i*ones(numClicks,1)];
 %     Инкрементируем переменную длины ядра
