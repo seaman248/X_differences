@@ -8,6 +8,7 @@ rgbLayer = zeros(Xp, Yp, 3);
 
 for i=1:layerSkip:Zp
     rgbLayer(:,:,3) = DAPI(:,:,i)/max(max(DAPI(:,:,i)));
+    rgbLayer(:,:,2) = FITC(:,:,i)/max(max(FITC(:,:,i)));
     rgbLayer(:,:,1) = Rh(:,:,i)/max(max(Rh(:,:,i)));
     imagesc(rgbLayer);
     [x,y,P] = impixel();

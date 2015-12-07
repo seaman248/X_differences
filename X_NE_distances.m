@@ -50,3 +50,5 @@ axis off
 set(gca,'XLimMode','manual');
 set(gca,'YLimMode','manual');
 set(gca,'ZLimMode','manual');
+
+disp(mean(S1_NE_distances));

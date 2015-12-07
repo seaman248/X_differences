@@ -3,7 +3,7 @@ addpath('./required_functions');
 % load('FITC.mat');
 % load('DAPI.mat');
 % load('Rh.mat');
-
+picNameOffset = 12;
 layerSkip = 3;
 NE = zeros(300, 3);
 NEOverlay = zeros(300,3);
@@ -12,7 +12,7 @@ NE_Lenght = 0; % Z ядра
 % Цикл по картинкам
 for i=1:layerSkip:Zp
 %     Формируем имя картинки в цикле
-    imgName = [images, 'nucleus_z',num2str(i,'%02d'), 'c1.PNG'];
+    imgName = [images, 'nucleus_z',num2str(i+picNameOffset-1,'%02d'), 'c1.PNG'];
 %     Делаем из картинки матрицу
     image = imread(imgName);
 %     Выводим картинку обратным преобразованием из матрицы
