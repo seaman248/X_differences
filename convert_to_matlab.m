@@ -1,9 +1,9 @@
 clear all;
-basename = 'nucleus7/';
+basename = 'nucleus11/';
 images = ['./nucleus_a/', basename];
-[Xp, Yp] = size(rgb2gray(imread('./nucleus_a/nucleus7/nucleus_z12c3.PNG')));
-fromZ = 12;
-toZ = 35;
+[Xp, Yp] = size(rgb2gray(imread(['./nucleus_a/',basename,'/nucleus_z03c3.PNG'])));
+fromZ = 1;
+toZ = 16;
 Zp = toZ - fromZ;
 
 [DAPI, FITC, Rh] = deal(zeros(Xp, Yp, Zp));
